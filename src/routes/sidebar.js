@@ -81,7 +81,7 @@ const routes = [
     name: 'Customer data',
   },
   {
-    path: '/',
+    path: '/app/notify-customer',
     icon: <MegaphoneIcon className={iconClasses}/>, 
     name: 'Notify Customer',
   },

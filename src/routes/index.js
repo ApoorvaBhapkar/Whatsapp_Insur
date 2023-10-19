@@ -24,7 +24,7 @@ const ManagerTable = lazy(() => import('../pages/protected/ManagerTable'))
 const ExecutiveTable = lazy(() => import('../pages/protected/ExecutiveTable'))
 const fileUpload = lazy(() => import('../pages/protected/fileUpload'))
 const CustomerData = lazy(() => import('../pages/protected/CustomerData'))
-
+const NotifyCustomer = lazy(() => import('../pages/protected/NotifyCustomer'))
 
 const routes = [
   {
@@ -50,6 +50,10 @@ const routes = [
   {
     path: '/customer-data', // the url
     component: CustomerData, // view rendered
+  },
+  {
+    path: '/notify-customer', // the url
+    component: NotifyCustomer, // view rendered
   },
   {
     path: '/invoice-generate', // the url
