@@ -82,15 +82,15 @@ function Register() {
     <div className="mx-auto w-full max-w-xl">
             <form onSubmit={(e) => submitForm(e)}>
               <div className="mb-4">
-                <div defaultValue={registerObj.role} updateType="role" className="form-group mt-3" >
-                    <label>Select Role for the user</label>
-                    <select className="form-control mt-1" >
-                    {/* onChange={(e) => {setRole(e.target.value); }} */}
-                    <option value="">Select an option</option>
-                    <option value="Admin">Admin</option>
-                    <option value="Manager">Manager</option>
-                    <option value="Executive">Executive</option>
-                    {/* Add more options as needed */}
+                <div updateType="role" className="form-group" >
+                    <label for="roles" className="text-sm">Select Role for the user</label>
+                    <select name="roles" id="roles" className="form-control mt-1 text-sm" >
+                      {/* onChange={(e) => {setRole(e.target.value); }} */}
+                      <option value="">Select an option</option>
+                      <option value="Admin">Admin</option>
+                      <option value="Manager">Manager</option>
+                      <option value="Executive">Executive</option>
+                      {/* Add more options as needed */}
                     </select>
                 </div>
                 <InputText

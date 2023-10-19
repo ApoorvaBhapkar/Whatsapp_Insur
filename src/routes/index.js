@@ -25,11 +25,17 @@ const ExecutiveTable = lazy(() => import('../pages/protected/ExecutiveTable'))
 const fileUpload = lazy(() => import('../pages/protected/fileUpload'))
 const CustomerData = lazy(() => import('../pages/protected/CustomerData'))
 const NotifyCustomer = lazy(() => import('../pages/protected/NotifyCustomer'))
+const Conversations = lazy(() => import('../pages/protected/Conversations'))
+const InsuranceDashboard = lazy(() => import('../pages/protected/InsuranceDashboard'))
 
 const routes = [
   {
     path: '/dashboard', // the url
     component: Dashboard, // view rendered
+  },
+  {
+    path: '/insurance-dashboard', // the url
+    component: InsuranceDashboard, // view rendered
   },
   {
     path: '/register-user', // the url
@@ -54,6 +60,10 @@ const routes = [
   {
     path: '/notify-customer', // the url
     component: NotifyCustomer, // view rendered
+  },
+  {
+  path: '/conversations', // the url
+  component: Conversations, // view rendered
   },
   {
     path: '/invoice-generate', // the url

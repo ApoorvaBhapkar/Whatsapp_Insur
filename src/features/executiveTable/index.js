@@ -45,7 +45,7 @@ function Leads(){
 
     const deleteCurrentLead = (index) => {
         dispatch(openModal({title : "Confirmation", bodyType : MODAL_BODY_TYPES.CONFIRMATION, 
-        extraObject : { message : `Are you sure you want to delete this lead?`, type : CONFIRMATION_MODAL_CLOSE_TYPES.LEAD_DELETE, index}}))
+        extraObject : { message : `Are you sure you want to delete this Executive?`, type : CONFIRMATION_MODAL_CLOSE_TYPES.LEAD_DELETE, index}}))
     }
 
     return(
@@ -88,7 +88,7 @@ function Leads(){
                                     <td>{moment(new Date()).add(0, 'days').format("DD MMM YY")}</td>
                                     <td>{getDummyStatus(k)}</td>
                                     {/* {l.role} , -5*(k+2)*/}
-                                    <td>Manager</td> 
+                                    <td>{l.role}</td> 
                                     <td><button className="btn btn-square btn-ghost" onClick={() => deleteCurrentLead(k)}><TrashIcon className="w-5"/></button></td>
                                     </tr>
                                 )

@@ -53,6 +53,23 @@ const TopSideButtons = ({removeFilter, applyFilter, applySearch}) => {
     )
 }
 
+const NotifyAll = () => {
+
+    useEffect(() => {
+    }, [])
+
+    return(
+        <div className="flex x-space-6">
+            <div className="text-center pr-2 pt-4">
+                <span className="text-blue text-sm inline-block">*If you click send All button the message will send to all the users</span>
+            </div>
+            <div>
+                <button className="float-left btn border-logo-color-light-green bg-logo-color-light-green text-white shadow-lg">Notify All</button>
+            </div>
+            
+        </div>
+    )
+}
 
 function Transactions(){
 
@@ -77,8 +94,8 @@ function Transactions(){
     return(
         <>
             
-            <TitleCard title="Recent Transactions" topMargin="mt-2" TopSideButtons={<TopSideButtons applySearch={applySearch} applyFilter={applyFilter} removeFilter={removeFilter}/>}>
-
+            {/* <TitleCard title="Recent Transactions" topMargin="mt-2" TopSideButtons={<TopSideButtons applySearch={applySearch} applyFilter={applyFilter} removeFilter={removeFilter}/>}> */}
+            <TitleCard topMargin="mt-2" TopSideButtons={<NotifyAll/>}>
                 {/* Team Member list in table format loaded constant */}
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
@@ -124,6 +141,15 @@ function Transactions(){
                                     <td>{l.location}</td>
                                     <td>${l.amount}</td>
                                     <td>{moment(l.date).format("D MMM")}</td>
+                                    <td>${l.amount}</td>
+                                    <td>${l.amount}</td>
+                                    <td>${l.amount}</td>
+                                    <td>${l.amount}</td>
+                                    <td>${l.amount}</td>
+                                    <td>${l.amount}</td>
+                                    <td>${l.amount}</td>
+                                    <td>${l.amount}</td>
+                                    <td>${l.amount}</td>
                                     <td>${l.amount}</td>
                                     </tr>
                                 )

@@ -38,7 +38,7 @@ const routes = [
     name: 'Profile', // name that appear in Sidebar
   },
   {
-    path: '/app/dashboard',
+    path: '/app/insurance-dashboard',
     icon: <Squares2X2Icon className={iconClasses}/>, 
     name: 'Dashboard',
   },
@@ -47,7 +47,6 @@ const routes = [
     icon: <UserPlusIcon className={iconClasses}/>, 
     name: 'Register New User',
   },
-  
   {
     path: '', //no url needed as this has submenu
     icon: <UserGroupIcon className={`${iconClasses} inline` }/>, // icon component
@@ -86,7 +85,7 @@ const routes = [
     name: 'Notify Customer',
   },
   {
-    path: '/',
+    path: '/app/conversations',
     icon: <ConvIcon className={iconClasses}/>, 
     name: 'Conversations',
   },

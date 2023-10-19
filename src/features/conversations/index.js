@@ -99,6 +99,7 @@ function Transactions(){
                         <th>Executive Number</th>
                         <th>Start Date</th>
                         <th>End Date</th>
+                        <th>Notify</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -106,6 +107,7 @@ function Transactions(){
                             trans.map((l, k) => {
                                 return(
                                     <tr key={k}>
+                                    <td>${l.amount}</td>
                                     <td>
                                         <div className="flex items-center space-x-3">
                                             <div className="avatar">
@@ -131,7 +133,9 @@ function Transactions(){
                                     <td>${l.amount}</td>
                                     <td>${l.amount}</td>
                                     <td>${l.amount}</td>
-                                    <td>${l.amount}</td>
+                                    <td><div>
+                <button className="float-left btn border-logo-color-light-green bg-logo-color-light-green text-white shadow-lg">Send</button>
+            </div></td>
                                     </tr>
                                 )
                             })

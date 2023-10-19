@@ -5,6 +5,8 @@ module.exports = Object.freeze({
         LEAD_ADD_NEW : "LEAD_ADD_NEW",
         CONFIRMATION : "CONFIRMATION",
         DEFAULT : "",
+        MANAGER_ADD_NEW:"MANAGER_ADD_NEW",
+        EXECUTIVE_ADD_NEW:"EXECUTIVE_ADD_NEW",
     },
 
     RIGHT_DRAWER_TYPES : {
@@ -14,5 +16,7 @@ module.exports = Object.freeze({
 
     CONFIRMATION_MODAL_CLOSE_TYPES : {
         LEAD_DELETE : "LEAD_DELETE",
+        MANAGER_DELETE : "MANAGER_DELETE",
+        EXECUTIVE_DELETE : "EXECUTIVE_DELETE",
     },
 });

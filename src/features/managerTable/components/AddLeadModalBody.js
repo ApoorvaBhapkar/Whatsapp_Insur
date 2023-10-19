@@ -6,7 +6,6 @@ import { showNotification } from "../../common/headerSlice"
 import { addNewLead } from "../leadSlice"
 
 const INITIAL_LEAD_OBJ = {
-    Mno :"",
     first_name : "",
     last_name : "",
     email : "",
@@ -35,7 +34,7 @@ function AddLeadModalBody({closeModal}){
                 "avatar": "https://reqres.in/img/faces/1-image.jpg"
             }
             dispatch(addNewLead({newLeadObj}))
-            dispatch(showNotification({message : "New Manager Added!", status : 1}))
+            dispatch(showNotification({message : "New User Added!", status : 1}))
             closeModal()
         }
     }

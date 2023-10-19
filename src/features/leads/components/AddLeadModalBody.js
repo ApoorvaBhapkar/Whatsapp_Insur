@@ -8,7 +8,8 @@ import { addNewLead } from "../leadSlice"
 const INITIAL_LEAD_OBJ = {
     first_name : "",
     last_name : "",
-    email : ""
+    email : "",
+    role: ""
 }
 
 function AddLeadModalBody({closeModal}){
@@ -20,17 +21,20 @@ function AddLeadModalBody({closeModal}){
 
     const saveNewLead = () => {
         if(leadObj.first_name.trim() === "")return setErrorMessage("First Name is required!")
+        else if(leadObj.last_name.trim() === "")return setErrorMessage("Last Name id is required!")
         else if(leadObj.email.trim() === "")return setErrorMessage("Email id is required!")
+        else if(leadObj.role.trim() === "")return setErrorMessage("Role is required!")
         else{
             let newLeadObj = {
                 "id": 7,
                 "email": leadObj.email,
                 "first_name": leadObj.first_name,
                 "last_name": leadObj.last_name,
-                "avatar": "https://reqres.in/img/faces/1-image.jpg"
+                "avatar": "https://reqres.in/img/faces/1-image.jpg",
+                "role": leadObj.role
             }
             dispatch(addNewLead({newLeadObj}))
-            dispatch(showNotification({message : "New Lead Added!", status : 1}))
+            dispatch(showNotification({message : "New User Added!", status : 1}))
             closeModal()
         }
     }
@@ -48,6 +52,7 @@ function AddLeadModalBody({closeModal}){
             <InputText type="text" defaultValue={leadObj.last_name} updateType="last_name" containerStyle="mt-4" labelTitle="Last Name" updateFormValue={updateFormValue}/>
 
             <InputText type="email" defaultValue={leadObj.email} updateType="email" containerStyle="mt-4" labelTitle="Email Id" updateFormValue={updateFormValue}/>
+            <InputText type="text" defaultValue={leadObj.role} updateType="role" containerStyle="mt-4" labelTitle="Role" updateFormValue={updateFormValue}/>
 
 
             <ErrorText styleClass="mt-16">{errorMessage}</ErrorText>

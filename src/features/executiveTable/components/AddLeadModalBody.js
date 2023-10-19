@@ -6,7 +6,7 @@ import { showNotification } from "../../common/headerSlice"
 import { addNewLead } from "../leadSlice"
 
 const INITIAL_LEAD_OBJ = {
-    Mno :"",
+    id :"",
     first_name : "",
     last_name : "",
     email : "",
